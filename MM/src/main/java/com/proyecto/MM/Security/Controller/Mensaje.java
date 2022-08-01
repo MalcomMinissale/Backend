@@ -5,7 +5,7 @@ public class Mensaje {
  private String mensaje;
  
  
- //consctructor
+ //constructor
 
     public Mensaje() {
     }
@@ -28,7 +28,6 @@ public class Mensaje {
  
  
 }
-
 
 
 

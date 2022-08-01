@@ -1,6 +1,7 @@
 
 package com.proyecto.MM.Security.Dto;
 
+
 import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -18,6 +19,11 @@ public class JwtDto {
         this.nombreUsuario = nombreUsuario;
         this.authorities = authorities;
     }
+
+    public JwtDto() {
+    }
+
+    
     
     // getters y setters
 

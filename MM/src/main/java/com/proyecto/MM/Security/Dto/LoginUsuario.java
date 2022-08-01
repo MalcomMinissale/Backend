@@ -7,6 +7,9 @@ package com.proyecto.MM.Security.Dto;
 import javax.validation.constraints.NotBlank;
 
 
+
+
+
 public class LoginUsuario {
     @NotBlank
     private String nombreUsuario;

@@ -15,7 +15,6 @@ public class UsuarioPrincipal implements UserDetails {
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
 
-    //constructor
     public UsuarioPrincipal(String nombre, String nombreUsuario, String email, String password, Collection<? extends GrantedAuthority> authorities) {
         this.nombre = nombre;
         this.nombreUsuario = nombreUsuario;
@@ -39,20 +38,17 @@ public class UsuarioPrincipal implements UserDetails {
         return password;
     }
 
-    @Override
-    public String getUsername() {
-        return nombreUsuario;
-
-    }
-
     public String getNombre() {
         return nombre;
-
     }
 
     public String getEmail() {
         return email;
+    }
 
+    @Override
+    public String getUsername() {
+        return nombreUsuario;
     }
 
     @Override

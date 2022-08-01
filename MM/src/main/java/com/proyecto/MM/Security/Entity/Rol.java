@@ -1,6 +1,7 @@
 
 package com.proyecto.MM.Security.Entity;
 
+import com.proyecto.MM.Security.Enums.RolNombre;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -8,28 +9,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-import com.proyecto.MM.Security.Enums.RolNombre;
+
 
 @Entity
 public class Rol {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+@Id
+@GeneratedValue (strategy = GenerationType.IDENTITY)
+    
+   private int id;
     @NotNull
-    @Enumerated(EnumType.STRING)
-    private RolNombre rolNombre;
+    @Enumerated (EnumType.STRING)
+   private RolNombre rolNombre;
 
-  
-//constructor
+    public Rol() {
+    }
 
     public Rol(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
-
-    public Rol() {
-    }
-    
-    // Getters and Setters
 
     public int getId() {
         return id;
@@ -46,7 +43,7 @@ public class Rol {
     public void setRolNombre(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
+    
+    
 
-  
-
-}
+    }
