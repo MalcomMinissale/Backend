@@ -4,13 +4,12 @@
  */
 package com.proyecto.MM.Repository;
 
-import com.proyecto.MM.Entity.Experiencia;
-import java.util.Optional;
+import com.proyecto.MM.Entity.OtrosProyectos;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+
 @Repository
-public interface RExperiencia extends JpaRepository<Experiencia, Integer>{
-    public Optional<Experiencia> findByNombreExp (String nombreE);
-    public boolean existsByNombreExp (String nombreE);
+public interface RepoOtrosProyectos extends JpaRepository<OtrosProyectos, Long>{
+
 }

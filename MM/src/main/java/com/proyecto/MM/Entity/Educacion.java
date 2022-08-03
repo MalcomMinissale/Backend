@@ -17,16 +17,24 @@ public class Educacion {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private String iconoE;
+    private int anioE;
+    private String webE;
+
 
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE) {
+    public Educacion(int id, String nombreE, String descripcionE, String iconoE, int anioE, String webE) {
+        this.id = id;
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.iconoE = iconoE;
+        this.anioE = anioE;
+        this.webE = webE;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -47,6 +55,33 @@ public class Educacion {
     }
 
     public void setDescripcionE(String descripcionE) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.descripcionE = descripcionE;
     }
+
+    public String getIconoE() {
+        return iconoE;
+    }
+
+    public void setIconoE(String iconoE) {
+        this.iconoE = iconoE;
+    }
+
+    public int getAnioE() {
+        return anioE;
+    }
+
+    public void setAnioE(int anioE) {
+        this.anioE = anioE;
+    }
+
+    public String getWebE() {
+        return webE;
+    }
+
+    public void setWebE(String webE) {
+        this.webE = webE;
+    }
+
+  
+    
 }

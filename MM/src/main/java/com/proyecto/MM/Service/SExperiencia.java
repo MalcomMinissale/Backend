@@ -24,8 +24,8 @@ public class SExperiencia {
     public Optional<Experiencia> getOne(int id){
         return rExperiencia.findById(id);
     }
-    public Optional<Experiencia> getByNombreE(String nombreE){
-        return rExperiencia.findByNombreE(nombreE);
+    public Optional<Experiencia> getByNombreExp(String nombreExp){
+        return rExperiencia.findByNombreExp(nombreExp);
     }
     public void save (Experiencia experiencia){
         rExperiencia.save(experiencia);
@@ -36,11 +36,11 @@ public class SExperiencia {
     public boolean existsById(int id){
         return rExperiencia.existsById(id);
     }
-    public boolean existsByNombre(String nombreE){
-        return rExperiencia.existsByNombreE(nombreE);
+    public boolean existsByNombre(String nombreExp){
+        return rExperiencia.existsByNombreExp(nombreExp);
     }
 
-    public boolean existsByNombreE(String nombreE) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean existsByNombreExp(String nombreExp) {
+        return rExperiencia.existsByNombreExp(nombreExp);
     }
 }

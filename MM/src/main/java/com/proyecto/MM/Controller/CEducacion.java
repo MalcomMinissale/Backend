@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/educacion")
 @CrossOrigin(origins = "http://localhost:4200")
 public class CEducacion {
+    
     @Autowired
     SEducacion sEducacion;
     
@@ -65,7 +66,8 @@ public class CEducacion {
         }
         
         Educacion educacion = new Educacion(
-                dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
+                dtoeducacion.getId(), dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE(),
+                dtoeducacion.getIconoE(), dtoeducacion.getAnioE(), dtoeducacion.getWebE()
             );
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
@@ -77,7 +79,7 @@ public class CEducacion {
         if(!sEducacion.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         }
-        if(sEducacion.existsByNombreE(dtoeducacion.getNombreE()) && sEducacion.getByNmbreE(dtoeducacion.getNombreE()).get().getId() != id){
+        if(sEducacion.existsByNombreE(dtoeducacion.getNombreE()) && sEducacion.getByNombreE(dtoeducacion.getNombreE()).get().getId() != id){
             return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
         if(StringUtils.isBlank(dtoeducacion.getNombreE())){
